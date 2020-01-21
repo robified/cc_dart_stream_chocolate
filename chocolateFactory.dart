@@ -8,5 +8,9 @@ class Order {
 }
 
 void main() {
-  
+  final controller = new StreamController();
+
+  final order = new Order('banana');
+
+  controller.sink.add(order);
 }
