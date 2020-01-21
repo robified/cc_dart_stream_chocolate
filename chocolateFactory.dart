@@ -27,4 +27,8 @@ void main() {
   controller.stream
     .map((order) => order.type)
     .transform(baker)
+    .listen(
+      (cake) => print('Heres your cake $cake'),
+      onError: (error) => print(error)
+    );
 }
